@@ -135,8 +135,12 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
   touch-action: pan-y pinch-zoom;
   background: #2e3c44;
 }
-.hero-office { --hero-backdrop: url("assets/office-mobile.webp"); }
-.hero-highway { --hero-backdrop: url("assets/shijiazhuang-expressway-mobile.webp"); }
+.hero-office { --hero-backdrop: url("assets/office-sunny-mobile.jpg"); }
+.hero-highway { --hero-backdrop: url("assets/guanting-expressway-mobile.jpg"); }
+@supports (background-image: image-set(url("") type("image/webp"))) {
+  .hero-office { --hero-backdrop: image-set(url("assets/office-sunny-mobile.webp") type("image/webp"), url("assets/office-sunny-mobile.jpg") type("image/jpeg")); }
+  .hero-highway { --hero-backdrop: image-set(url("assets/guanting-expressway-mobile.webp") type("image/webp"), url("assets/guanting-expressway-mobile.jpg") type("image/jpeg")); }
+}
 .hero-bridge-truck { --hero-backdrop: url("assets/bridge-truck-mobile.webp"); }
 .hero-slide { overflow: hidden; }
 .hero-slide::before {
@@ -159,6 +163,9 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
   mask-image: linear-gradient(to bottom, transparent, #000 14px, #000 calc(100% - 14px), transparent);
 }
 .hero-slide::after { background: linear-gradient(180deg, rgba(16, 24, 29, .16) 0%, rgba(16, 24, 29, .42) 50%, rgba(16, 24, 29, .4) 100%); }
+.hero-office::after, .hero-highway::after {
+  background: linear-gradient(180deg, rgba(16, 24, 29, .05), rgba(16, 24, 29, .40) 50%, rgba(16, 24, 29, .30));
+}
 .hero > .container {
   position: absolute;
   inset: 0;
