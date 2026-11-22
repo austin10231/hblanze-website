@@ -284,10 +284,11 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 
 /* 工程案例 */
 .home-projects .case-cards { grid-template-columns: minmax(0, 1fr); gap: 0; }
-.home-projects .case-cards .card:first-child img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
-.home-projects .case-cards .card:first-child .card-body { padding: 14px 0 22px; }
-.home-projects .case-cards .card:first-child h3 { font-size: 1.0625rem; }
-.home-projects .case-cards .card:not(:first-child) {
+.home-projects .case-cards .case-featured { order: -1; }
+.home-projects .case-cards .case-featured img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 80%; }
+.home-projects .case-cards .case-featured .card-body { padding: 14px 0 22px; }
+.home-projects .case-cards .case-featured h3 { font-size: 1.0625rem; }
+.home-projects .case-cards .card:not(.case-featured) {
   display: grid;
   grid-template-columns: clamp(96px, 30vw, 150px) minmax(0, 1fr);
   align-items: center;
@@ -296,9 +297,9 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
   border-top: 1px solid var(--line);
 }
 .home-projects .case-cards .card:last-child { border-bottom: 1px solid var(--line); }
-.home-projects .case-cards .card:not(:first-child) img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-.home-projects .case-cards .card:not(:first-child) .card-body { padding: 0; }
-.home-projects .case-cards .card:not(:first-child) p { display: none; }
+.home-projects .case-cards .card:not(.case-featured) img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.home-projects .case-cards .card:not(.case-featured) .card-body { padding: 0; }
+.home-projects .case-cards .card:not(.case-featured) p { display: none; }
 .home-projects .case-cards h3 { color: var(--ink); font-size: .9375rem; font-weight: 500; letter-spacing: .03em; line-height: 1.5; }
 .home-projects .case-cards p { color: var(--muted); font-size: .8125rem; }
 .home-projects .category { margin-bottom: 4px; color: var(--accent); font-size: .75rem; font-weight: 400; letter-spacing: .12em; }
@@ -370,6 +371,7 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 .footer nav { column-gap: 22px; }
 .footer nav a { min-height: 40px; color: var(--ink); font-size: .875rem; }
 .footer-small { margin-top: 10px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--soft); font-size: .75rem; }
+.header-tel { display: none; }
 .mobile-contact {
   position: fixed;
   inset: auto 0 0;
@@ -413,9 +415,9 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 
 @media (min-width: 620px) {
   .home-services .service-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .home-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .home-facts div:nth-child(n) { padding-left: 16px; border-left: 1px solid var(--line); }
-  .home-facts div:nth-child(3n+1) { padding-left: 0; border-left: 0; }
+  .home-facts div:first-child { padding-left: 0; border-left: 0; }
   .equipment-strip { grid-auto-columns: 38%; }
 }
 @media (orientation: landscape) {
