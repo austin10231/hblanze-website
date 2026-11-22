@@ -1,4 +1,4 @@
-.hero .container { min-height: clamp(330px, min(50vw, calc(100vh - 84px)), 880px); }
+.hero .container { min-height: clamp(360px, min(42vw, calc(100vh - 230px)), 640px); }
 .hero-slide { transition: none; }
 
 .hero-office { --hero-backdrop: url("assets/office.jpg"); --photo-ratio: calc(1800 / 899); }

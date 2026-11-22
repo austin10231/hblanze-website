@@ -98,7 +98,7 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 
 /* 检测业务 */
 .home-services .service-cards { gap: 28px; counter-reset: service; }
-.home-services .service-cards .card img { aspect-ratio: 4 / 3; }
+.home-services .service-cards .card img { aspect-ratio: 3 / 2; }
 .home-services .service-cards .card-body { padding: 18px 0 0; }
 .home-services .service-cards h3 { font-size: 1.0625rem; letter-spacing: .05em; }
 .home-services .service-cards h3::before {
@@ -113,20 +113,20 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 }
 .home-services .service-cards p { margin-top: 6px; font-size: .875rem; }
 
-/* 公司简介：配图 + 文字 + 4 项数据 */
+/* 公司简介：配图 + 文字 + 4 项数据（2×2，避免窄屏时数字与单位溢出） */
 .home-about .split { grid-template-columns: 1.08fr 1fr; gap: clamp(40px, 6vw, 96px); }
 .home-about .split-copy > p { color: #4e5b62; line-height: 1.95; }
 .home-about .split-copy .actions { display: none; }
-.home-page dl.home-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 34px; border-top: 1px solid var(--line); }
-.home-facts div { display: flex; flex-direction: column-reverse; justify-content: flex-end; padding: 20px 10px 0 18px; border-left: 1px solid var(--line); }
-.home-facts div:first-child { padding-left: 0; border-left: 0; }
+.home-page dl.home-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 32px; border-top: 1px solid var(--line); }
+.home-facts div { display: flex; flex-direction: column-reverse; justify-content: flex-end; min-width: 0; padding: 18px 12px 16px 0; border-bottom: 1px solid var(--line); }
+.home-facts div:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
 .home-facts dt { margin-top: 4px; color: var(--muted); font-size: .8125rem; letter-spacing: .04em; line-height: 1.5; }
 .home-facts dd { color: var(--blue); font-size: clamp(1.75rem, 2.3vw, 2.25rem); font-weight: 300; font-variant-numeric: tabular-nums; letter-spacing: .01em; line-height: 1.15; white-space: nowrap; }
 .home-facts dd span { margin-left: 3px; color: var(--muted); font-size: .8125rem; font-weight: 400; letter-spacing: .04em; }
 
 /* 工程案例 */
 .home-projects .case-cards { gap: 28px; }
-.home-projects .case-cards img { aspect-ratio: 4 / 3; }
+.home-projects .case-cards img { aspect-ratio: 3 / 2; }
 .home-projects .case-cards .card-body { padding: 18px 0 0; }
 .home-projects .category { margin-bottom: 6px; color: var(--accent); font-size: .8125rem; font-weight: 400; letter-spacing: .14em; }
 .home-projects .case-cards h3 { font-size: 1.0625rem; letter-spacing: .03em; }
@@ -136,14 +136,14 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 .home-page .mobile-only.home-equipment, .home-page .mobile-only.home-credentials { display: block; }
 .equipment-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; }
 .equipment-strip a { display: block; }
-.equipment-strip img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #e6eaeb; transition: opacity .2s ease; }
+.equipment-strip img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: #e6eaeb; transition: opacity .2s ease; }
 .equipment-wide img { object-position: 22% 50%; }
 .equipment-strip span { display: block; padding-top: 16px; font-size: 1rem; letter-spacing: .05em; }
 .equipment-strip a:hover img { opacity: .9; }
 .equipment-strip a:hover span { color: var(--blue); }
 .credential-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; }
 .credential-links a { display: flex; flex-direction: column; gap: 16px; }
-.credential-thumb { position: relative; display: block; aspect-ratio: 4 / 3; background: var(--mist); }
+.credential-thumb { position: relative; display: block; aspect-ratio: 16 / 10; background: var(--mist); }
 .credential-thumb img {
   position: absolute;
   inset: 0;
