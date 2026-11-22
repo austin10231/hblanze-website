@@ -155,8 +155,6 @@ a.card:hover { border-color: #7c9ab0; box-shadow: 0 8px 24px rgba(27,54,77,.09);
 .gallery img { aspect-ratio: 1.5; }
 .gallery-title { margin: 23px 0 11px; font-size: 1.2rem; color: var(--blue); }
 .facility-gallery img { object-fit: contain; background: #fff; }
-.media-credit { font-size: .875rem; }
-.media-credit a { text-decoration: underline; text-underline-offset: 4px; }
 .credentials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .credential { border: 1px solid var(--line); background: white; }
 .credential-image { display: block; padding: 18px; background: var(--mist); }

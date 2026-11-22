@@ -15,7 +15,8 @@
 }
 
 body { padding-bottom: calc(53px + env(safe-area-inset-bottom, 0px)); color: var(--ink); }
-.menu-locked, .menu-locked body { overflow: hidden; }
+/* 菜单打开时只锁 html；若同时给 body 设 overflow，body 会变成滚动容器，吸顶页头会随页面滚出屏幕 */
+.menu-locked { overflow: hidden; }
 .mobile-only { display: block; }
 .skip { z-index: 12; }
 h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figcaption { font-weight: 500; }
@@ -114,13 +115,13 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
-/* 首页轮播：与电脑版一致完整显示照片。竖屏按照片原比例 2:1 铺满，横屏限高后改为完整缩放 */
+/* 首页轮播：竖屏按 16:9 铺满（照片两侧各裁约 6%，正门「河北蓝泽」仍完整），横屏限高后改为完整缩放 */
 .home-page .hero { background: #2e3c44; color: white; }
 .hero-slides {
   position: relative;
   z-index: 0;
-  height: min(50vw, 78vh);
-  height: min(50vw, 78svh);
+  height: min(56.25vw, 78vh);
+  height: min(56.25vw, 78svh);
   touch-action: pan-y pinch-zoom;
   background: #2e3c44;
 }
@@ -159,8 +160,8 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 }
 .hero-translation {
   position: relative;
-  margin-top: 1.5em;
-  padding-top: 1.35em;
+  margin-top: 1em;
+  padding-top: .95em;
   font-size: clamp(.47rem, 2.25vw, .75rem);
   font-weight: 400;
   letter-spacing: .1em;
