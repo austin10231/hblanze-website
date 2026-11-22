@@ -15,8 +15,6 @@
 }
 
 body { padding-bottom: calc(53px + env(safe-area-inset-bottom, 0px)); color: var(--ink); }
-/* 菜单打开时只锁 html；若同时给 body 设 overflow，body 会变成滚动容器，吸顶页头会随页面滚出屏幕 */
-.menu-locked { overflow: hidden; }
 .mobile-only { display: block; }
 .skip { z-index: 12; }
 h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figcaption { font-weight: 500; }
@@ -160,23 +158,13 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 }
 .hero-translation {
   position: relative;
-  margin-top: 1em;
-  padding-top: .95em;
+  margin-top: .55em;
+  padding-top: 0;
   font-size: clamp(.47rem, 2.25vw, .75rem);
   font-weight: 400;
   letter-spacing: .1em;
   opacity: .88;
   text-wrap: balance;
-}
-.hero-translation::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 1px;
-  content: "";
-  background: rgba(255, 255, 255, .62);
-  transform: translateX(-50%);
 }
 .hero-controls { right: auto; bottom: 2px; left: 50%; transform: translateX(-50%); }
 .hero-controls button { width: 34px; height: 40px; }
@@ -402,9 +390,9 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 
 @media (min-width: 620px) {
   .home-services .service-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .home-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .home-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .home-facts div:nth-child(n) { padding-left: 16px; border-left: 1px solid var(--line); }
-  .home-facts div:first-child { padding-left: 0; border-left: 0; }
+  .home-facts div:nth-child(3n+1) { padding-left: 0; border-left: 0; }
   .equipment-strip { grid-auto-columns: 38%; }
 }
 @media (orientation: landscape) {
