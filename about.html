@@ -2,11 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="了解河北蓝泽工程检测有限公司的公司概况、试验环境和质量方针。">
   <title>关于蓝泽｜河北蓝泽工程检测有限公司</title>
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css" media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)">
   <script src="site.js" defer></script>
 </head>
 <body>
@@ -44,7 +45,11 @@
 <section class="section">
   <div class="container split">
     <figure class="split-media">
-      <img src="assets/office.jpg" alt="河北蓝泽工程检测有限公司办公楼外景" width="1800" height="899" loading="lazy" decoding="async">
+      <picture>
+        <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.webp" type="image/webp">
+        <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.jpg">
+        <img src="assets/office.jpg" alt="河北蓝泽工程检测有限公司办公楼外景" width="1800" height="899" loading="lazy" decoding="async">
+      </picture>
       <figcaption>公司办公及试验场所</figcaption>
     </figure>
     <div class="split-copy">
@@ -88,5 +93,9 @@
     <div class="footer-small">© 河北蓝泽工程检测有限公司</div>
   </div>
 </footer>
+<nav class="mobile-only mobile-contact" aria-label="业务联系">
+  <a href="contact.html">联系蓝泽</a>
+  <a href="tel:18503111509">电话咨询</a>
+</nav>
 </body>
 </html>

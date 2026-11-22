@@ -2,11 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="河北蓝泽工程检测有限公司提供公路工程、工程材料及地基基础检测服务。浏览业务范围、资质能力、工程案例及联系方式。">
   <title>河北蓝泽工程检测有限公司｜公路工程试验检测</title>
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css" media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)">
   <script src="site.js" defer></script>
   <script src="carousel.js" defer></script>
 </head>
@@ -40,7 +41,8 @@
 
           <div class="hero-slide hero-office" data-slide data-active aria-hidden="false">
             <picture>
-              <source media="(max-width: 870px)" srcset="assets/office-mobile.jpg">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.webp" type="image/webp">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.jpg">
               <img src="assets/office.jpg" alt="河北蓝泽工程检测有限公司正门" width="1800" height="899" fetchpriority="high">
             </picture>
           </div>
@@ -48,7 +50,8 @@
           <!-- xibaipo.jpg photo credit and license: assets/photo-credits.txt -->
           <div class="hero-slide hero-xibaipo" data-slide aria-hidden="true">
             <picture>
-              <source media="(max-width: 870px)" srcset="assets/xibaipo-mobile.jpg">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/xibaipo-mobile.webp" type="image/webp">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/xibaipo-mobile.jpg">
               <img src="assets/xibaipo.jpg" alt="石家庄市新华区西柏坡高速及道路标识" width="2400" height="1325" decoding="async">
             </picture>
           </div>
@@ -56,7 +59,8 @@
 
           <div class="hero-slide hero-bridge-truck" data-slide aria-hidden="true">
             <picture>
-              <source media="(max-width: 870px)" srcset="assets/bridge-truck-mobile.jpg">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/bridge-truck-mobile.webp" type="image/webp">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/bridge-truck-mobile.jpg">
               <img src="assets/bridge-truck.jpg" alt="河北蓝泽的黄色桥梁检测车" width="1800" height="867" decoding="async">
             </picture>
           </div></div>
@@ -71,7 +75,15 @@
 <button class="slide-select" type="button" data-slide-to="2" aria-label="显示蓝泽检测车" aria-pressed="false"></button>
     </div>
   </section>
-  <section class="section home-services">
+  <nav class="mobile-only home-quick-links" aria-label="首页快捷入口">
+    <div class="container">
+      <a href="#home-services">检测业务</a>
+      <a href="#home-projects">工程案例</a>
+      <a href="#home-credentials">企业资质</a>
+      <a href="contact.html">联系我们</a>
+    </div>
+  </nav>
+  <section class="section home-services" id="home-services">
     <div class="container">
       <div class="section-heading"><div><h2>检测业务</h2></div><a class="button button-outline" href="services.html">查看项目清单</a></div>
       <div class="cards cards-four service-cards"><a class="card" href="services.html#road">
@@ -92,24 +104,49 @@
             </a></div>
     </div>
   </section>
-  <section class="section section-tint">
+  <section class="section section-tint home-about">
     <div class="container split">
       <figure class="split-media">
-        <img src="assets/office.jpg" alt="河北蓝泽工程检测有限公司正门" width="1800" height="899" loading="lazy" decoding="async">
+        <picture>
+          <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.webp" type="image/webp">
+          <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/office-mobile.jpg">
+          <img src="assets/office.jpg" alt="河北蓝泽工程检测有限公司正门" width="1800" height="899" loading="lazy" decoding="async">
+        </picture>
       </figure>
       <div class="split-copy">
         <h2>公司简介</h2>
         <p>河北蓝泽工程检测有限公司位于石家庄市鹿泉区，面向公路及建设工程，提供工程材料、路基路面、混凝土结构和地基基础等检测服务。</p>
+        <dl class="mobile-only home-facts">
+          <div><dt>中心试验室</dt><dd>1,200 <span>m²</span></dd></div>
+          <div><dt>办公及试验场所</dt><dd>1,500 <span>m²</span></dd></div>
+        </dl>
         <div class="actions"><a class="button button-outline" href="about.html">关于蓝泽</a><a class="button button-outline" href="qualifications.html">资质能力</a></div>
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section home-projects" id="home-projects">
     <div class="container">
       <div class="section-heading"><div><h2>工程案例</h2><p>公路检测、第三方验收与工地试验室。</p></div><a class="button button-outline" href="projects.html">查看全部案例</a></div>
       <div class="cards cards-three case-cards"><a class="card" href="projects.html#qugang"><img src="assets/qugang.jpg" alt="曲港高速公路项目现场" width="946" height="706" loading="lazy" decoding="async"><div class="card-body"><span class="category">公路工程</span><h3>曲港高速公路肃宁互通至京台高速段</h3><p>曲港高速公路一期工程检测现场。</p></div></a>
 <a class="card" href="projects.html#jinshi"><img src="assets/jinshi.jpg" alt="津石高速交工验收现场的检测人员" width="833" height="833" loading="lazy" decoding="async"><div class="card-body"><span class="category">第三方检测</span><h3>津石高速第三方检测交工验收</h3><p>天津至石家庄国家高速公路项目。</p></div></a>
 <a class="card" href="projects.html#laboratory"><img src="assets/site-lab.jpg" alt="曲港高速公路沧州段工地试验室外景" width="970" height="723" loading="lazy" decoding="async"><div class="card-body"><span class="category">工地试验室</span><h3>曲港高速公路沧州段工地试验室</h3><p>沧州段土建三办工地试验室。</p></div></a></div>
+    </div>
+  </section>
+
+  <section class="mobile-only section home-credentials section-tint" id="home-credentials" aria-labelledby="home-credentials-title">
+    <div class="container">
+      <div class="section-heading"><h2 id="home-credentials-title">企业资质</h2><a class="button button-outline" href="qualifications.html">查看资质</a></div>
+      <ul class="credential-links">
+        <li><a href="qualifications.html#business-license"><strong>营业执照</strong><span>查看证照</span></a></li>
+        <li><a href="qualifications.html#cma-certificate"><strong>检验检测机构资质认定证书</strong><span>查看证书</span></a></li>
+        <li><a href="qualifications.html#highway-certificate"><strong>公路水运工程试验检测机构等级证书</strong><span>查看证书</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="mobile-only section home-news" aria-labelledby="home-news-title">
+    <div class="container">
+      <div class="section-heading"><h2 id="home-news-title">新闻动态</h2></div>
+      <p>暂无已发布的公司动态。</p>
     </div>
   </section>
 
@@ -138,5 +175,9 @@
     <div class="footer-small">© 河北蓝泽工程检测有限公司</div>
   </div>
 </footer>
+<nav class="mobile-only mobile-contact" aria-label="业务联系">
+  <a href="contact.html">联系蓝泽</a>
+  <a href="tel:18503111509">电话咨询</a>
+</nav>
 </body>
 </html>
