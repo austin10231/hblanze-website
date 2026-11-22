@@ -109,7 +109,6 @@ body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
   pointer-events: none;
 }
 .hero-copy { width: 100%; padding: 0; }
-.hero-wordmark { margin-bottom: .46em; font-size: clamp(1.35rem, 5.7vw, 2.1rem); font-weight: 500; }
 .hero h1 {
   gap: .16em .36em;
   font-size: clamp(1.38rem, 6.2vw, 2.65rem);

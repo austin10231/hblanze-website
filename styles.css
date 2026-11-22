@@ -55,10 +55,8 @@ ul { padding-left: 1.3em; }
 .nav-link[aria-current="page"]::after { content: ""; position: absolute; height: 3px; inset: auto 0 0; background: #d36538; }
 
 .hero { position: relative; isolation: isolate; color: white; background: var(--navy); overflow: hidden; }
-.hero .container { display: flex; align-items: center; justify-content: center; min-height: clamp(440px, 43vw, 625px); }
+.hero .container { display: flex; align-items: center; justify-content: center; min-height: clamp(330px, min(50vw, calc(100vh - 84px)), 780px); }
 .hero-copy { padding: 30px 0 60px; text-align: center; pointer-events: none; }
-.hero-wordmark { display: flex; align-items: center; justify-content: center; gap: .16em; margin: 0 0 .5em; font-size: clamp(1.65rem, 3.25vw, 2.8rem); font-weight: 550; line-height: 1; }
-.hero-wordmark img { width: 1.28em; height: auto; filter: grayscale(1) invert(1) brightness(3.6) contrast(1.5); mix-blend-mode: screen; }
 .hero h1 { display: flex; flex-wrap: wrap; justify-content: center; gap: .13em .38em; font-size: clamp(2.8rem, 5.8vw, 5rem); font-weight: 600; letter-spacing: .055em; line-height: 1.13; text-shadow: 0 2px 14px rgba(8,24,39,.48); }
 .hero-translation { margin: .83em 0 0; color: #f7f8fa; font-size: clamp(.62rem, 1.15vw, .94rem); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-shadow: 0 1px 5px #172c36; }
 .hero h1 span + span::before { content: ""; width: .075em; height: .075em; border-radius: 50%; background: #f4a273; margin: .12em .08em 0 0; }
@@ -69,9 +67,7 @@ ul { padding-left: 1.3em; }
 .hero-slide { opacity: 0; visibility: hidden; transition: opacity .52s ease, visibility .52s; }
 .hero-slide[data-active] { opacity: 1; visibility: visible; z-index: 1; }
 .hero-slide picture, .hero-slide img { display: block; width: 100%; height: 100%; }
-.hero-slide img { object-fit: cover; object-position: center 50%; }
-.hero-bridge-truck img { object-position: center 57%; }
-.hero-office img { object-position: center 60%; }
+.hero-slide img { object-fit: contain; object-position: center; }
 .hero-slide::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(19,28,35,.18), rgba(19,28,35,.50) 42%, rgba(19,28,35,.50));
