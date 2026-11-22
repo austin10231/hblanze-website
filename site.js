@@ -9,6 +9,7 @@
   function setMenu(open) {
     nav.classList.toggle('open', open);
     header.classList.toggle('menu-open', open);
+    document.documentElement.classList.toggle('menu-locked', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? '收起导航' : '展开导航');
   }
