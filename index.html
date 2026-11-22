@@ -11,7 +11,7 @@
   <script src="site.js" defer></script>
   <script src="carousel.js" defer></script>
 </head>
-<body>
+<body class="home-page">
 <a class="skip" href="#main">跳至页面内容</a>
       <header class="header">
         <div class="container header-row">
@@ -47,12 +47,12 @@
             </picture>
           </div>
 
-          <!-- xibaipo.jpg photo credit and license: assets/photo-credits.txt -->
-          <div class="hero-slide hero-xibaipo" data-slide aria-hidden="true">
+          <!-- shijiazhuang-expressway.jpg photo credit and license: assets/photo-credits.txt -->
+          <div class="hero-slide hero-highway" data-slide aria-hidden="true">
             <picture>
-              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/xibaipo-mobile.webp" type="image/webp">
-              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/xibaipo-mobile.jpg">
-              <img src="assets/xibaipo.jpg" alt="石家庄市新华区西柏坡高速及道路标识" width="2400" height="1325" decoding="async">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/shijiazhuang-expressway-mobile.webp" type="image/webp">
+              <source media="(max-width: 870px), (max-width: 960px) and (max-height: 500px) and (pointer: coarse)" srcset="assets/shijiazhuang-expressway-mobile.jpg">
+              <img src="assets/shijiazhuang-expressway.jpg" alt="石家庄 S78 高速公路的高处远景" width="1800" height="960" decoding="async">
             </picture>
           </div>
 
@@ -66,26 +66,20 @@
           </div></div>
     <div class="container">
       <div class="hero-copy">
+        <p class="hero-wordmark" aria-label="蓝泽"><span>蓝</span><img src="assets/logo.jpg" alt="" width="104" height="69"><span>泽</span></p>
         <h1 aria-label="公正、科学、专业、高效"><span>公正<i aria-hidden="true"></i>科学</span><span>专业<i aria-hidden="true"></i>高效</span></h1>
+        <p class="hero-translation" lang="en">Impartial · Scientific · Professional · Efficient</p>
       </div>
     </div>
     <div class="hero-controls" data-slide-controls role="group" aria-label="首页图片切换">
       <button class="slide-select" type="button" data-slide-to="0" aria-label="显示公司正门" aria-pressed="true"></button>
-<button class="slide-select" type="button" data-slide-to="1" aria-label="显示石家庄西柏坡高速" aria-pressed="false"></button>
+<button class="slide-select" type="button" data-slide-to="1" aria-label="显示石家庄 S78 高速公路远景" aria-pressed="false"></button>
 <button class="slide-select" type="button" data-slide-to="2" aria-label="显示蓝泽检测车" aria-pressed="false"></button>
     </div>
   </section>
-  <nav class="mobile-only home-quick-links" aria-label="首页快捷入口">
-    <div class="container">
-      <a href="#home-services">检测业务</a>
-      <a href="#home-projects">工程案例</a>
-      <a href="#home-credentials">企业资质</a>
-      <a href="contact.html">联系我们</a>
-    </div>
-  </nav>
   <section class="section home-services" id="home-services">
     <div class="container">
-      <div class="section-heading"><div><h2>检测业务</h2></div><a class="button button-outline" href="services.html">查看项目清单</a></div>
+      <div class="section-heading"><div><h2>检测业务</h2></div><a class="button button-outline home-more" href="services.html" aria-label="查看更多检测业务">查看更多</a></div>
       <div class="cards cards-four service-cards"><a class="card" href="services.html#road">
               <img src="assets/road.jpg" alt="" width="440" height="296" loading="lazy" decoding="async">
               <div class="card-body"><h3>路基路面检测</h3><p>压实度、平整度、弯沉、车辙等</p></div>
@@ -114,8 +108,8 @@
         </picture>
       </figure>
       <div class="split-copy">
-        <h2>公司简介</h2>
-        <p>河北蓝泽工程检测有限公司位于石家庄市鹿泉区，面向公路及建设工程，提供工程材料、路基路面、混凝土结构和地基基础等检测服务。</p>
+        <div class="split-heading"><h2>公司简介</h2><a class="mobile-only home-more" href="about.html" aria-label="查看更多公司介绍">查看更多</a></div>
+        <p>河北蓝泽位于石家庄市鹿泉区，面向公路及建设工程提供专业检测服务。公司先后在河北、内蒙古、西藏等地开展试验检测业务。</p>
         <dl class="mobile-only home-facts">
           <div><dt>中心试验室</dt><dd>1,200 <span>m²</span></dd></div>
           <div><dt>办公及试验场所</dt><dd>1,500 <span>m²</span></dd></div>
@@ -126,7 +120,7 @@
   </section>
   <section class="section home-projects" id="home-projects">
     <div class="container">
-      <div class="section-heading"><div><h2>工程案例</h2><p>公路检测、第三方验收与工地试验室。</p></div><a class="button button-outline" href="projects.html">查看全部案例</a></div>
+      <div class="section-heading"><div><h2>工程案例</h2><p>公路检测、第三方验收与工地试验室。</p></div><a class="button button-outline home-more" href="projects.html" aria-label="查看更多工程案例">查看更多</a></div>
       <div class="cards cards-three case-cards"><a class="card" href="projects.html#qugang"><img src="assets/qugang.jpg" alt="曲港高速公路项目现场" width="946" height="706" loading="lazy" decoding="async"><div class="card-body"><span class="category">公路工程</span><h3>曲港高速公路肃宁互通至京台高速段</h3><p>曲港高速公路一期工程检测现场。</p></div></a>
 <a class="card" href="projects.html#jinshi"><img src="assets/jinshi.jpg" alt="津石高速交工验收现场的检测人员" width="833" height="833" loading="lazy" decoding="async"><div class="card-body"><span class="category">第三方检测</span><h3>津石高速第三方检测交工验收</h3><p>天津至石家庄国家高速公路项目。</p></div></a>
 <a class="card" href="projects.html#laboratory"><img src="assets/site-lab.jpg" alt="曲港高速公路沧州段工地试验室外景" width="970" height="723" loading="lazy" decoding="async"><div class="card-body"><span class="category">工地试验室</span><h3>曲港高速公路沧州段工地试验室</h3><p>沧州段土建三办工地试验室。</p></div></a></div>
@@ -135,18 +129,12 @@
 
   <section class="mobile-only section home-credentials section-tint" id="home-credentials" aria-labelledby="home-credentials-title">
     <div class="container">
-      <div class="section-heading"><h2 id="home-credentials-title">企业资质</h2><a class="button button-outline" href="qualifications.html">查看资质</a></div>
+      <div class="section-heading"><h2 id="home-credentials-title">企业资质</h2><a class="button button-outline home-more" href="qualifications.html" aria-label="查看更多企业资质">查看更多</a></div>
       <ul class="credential-links">
         <li><a href="qualifications.html#business-license"><strong>营业执照</strong><span>查看证照</span></a></li>
         <li><a href="qualifications.html#cma-certificate"><strong>检验检测机构资质认定证书</strong><span>查看证书</span></a></li>
         <li><a href="qualifications.html#highway-certificate"><strong>公路水运工程试验检测机构等级证书</strong><span>查看证书</span></a></li>
       </ul>
-    </div>
-  </section>
-  <section class="mobile-only section home-news" aria-labelledby="home-news-title">
-    <div class="container">
-      <div class="section-heading"><h2 id="home-news-title">新闻动态</h2></div>
-      <p>暂无已发布的公司动态。</p>
     </div>
   </section>
 
