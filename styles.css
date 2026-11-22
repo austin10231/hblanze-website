@@ -55,7 +55,7 @@ ul { padding-left: 1.3em; }
 .nav-link[aria-current="page"]::after { content: ""; position: absolute; height: 3px; inset: auto 0 0; background: #d36538; }
 
 .hero { position: relative; isolation: isolate; color: white; background: var(--navy); overflow: hidden; }
-.hero .container { display: flex; align-items: center; justify-content: center; min-height: clamp(330px, min(50vw, calc(100vh - 84px)), 880px); }
+.hero .container { display: flex; align-items: center; justify-content: center; min-height: clamp(330px, min(50vw, calc(100vh - 84px)), 780px); }
 .hero-copy { padding: 30px 0 60px; text-align: center; pointer-events: none; }
 .hero h1 { display: flex; flex-wrap: wrap; justify-content: center; gap: .13em .38em; font-size: clamp(2.8rem, 5.8vw, 5rem); font-weight: 600; letter-spacing: .055em; line-height: 1.13; text-shadow: 0 2px 14px rgba(8,24,39,.48); }
 .hero-translation { margin: .83em 0 0; color: #f7f8fa; font-size: clamp(.62rem, 1.15vw, .94rem); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-shadow: 0 1px 5px #172c36; }
@@ -168,41 +168,6 @@ a.card:hover { border-color: #7c9ab0; box-shadow: 0 8px 24px rgba(27,54,77,.09);
 .contact-items dd { min-width: 0; overflow-wrap: break-word; overflow-wrap: anywhere; }
 .contact-items a { display: inline-flex; min-height: 44px; align-items: center; color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
 .tel { white-space: nowrap; font-variant-numeric: tabular-nums; }
-
-@media (min-width: 961px), (min-width: 871px) and (min-height: 501px), (min-width: 871px) and (pointer: fine), (min-width: 871px) and (pointer: none) {
-  .hero-office { --hero-backdrop: url("assets/office.jpg"); --photo-ratio: calc(1800 / 899); }
-  .hero-highway { --hero-backdrop: url("assets/shijiazhuang-expressway.jpg"); --photo-ratio: calc(1800 / 960); }
-  .hero-bridge-truck { --hero-backdrop: url("assets/bridge-truck.jpg"); --photo-ratio: calc(1800 / 867); }
-  .hero-slide::before {
-    content: "";
-    position: absolute;
-    inset: -48px;
-    background: var(--hero-backdrop) center / 100% 100% no-repeat;
-    filter: blur(28px) saturate(.84);
-  }
-  .hero-slide::after {
-    background: linear-gradient(180deg, rgba(19,28,35,.13), rgba(19,28,35,.50) 44%, rgba(19,28,35,.49) 58%, rgba(19,28,35,.25) 84%, rgba(19,28,35,.34));
-  }
-  .hero-slide picture {
-    position: relative;
-    container-type: size;
-    display: grid;
-    grid-template: minmax(0, 1fr) / minmax(0, 1fr);
-    place-items: center;
-  }
-  .hero-slide img {
-    --photo-fade: clamp(10px, 1.3vw, 23px);
-    width: auto;
-    width: min(100cqw, calc(100cqh * var(--photo-ratio)));
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    mask-image:
-      linear-gradient(to right, transparent, black var(--photo-fade), black calc(100% - var(--photo-fade)), transparent),
-      linear-gradient(to bottom, transparent, black var(--photo-fade), black calc(100% - var(--photo-fade)), transparent);
-    mask-composite: intersect;
-  }
-}
 
 @media (max-width: 1020px) {
   .nav { gap: 16px; }
