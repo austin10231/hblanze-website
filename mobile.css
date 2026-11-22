@@ -113,17 +113,40 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
 @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
-/* 首页轮播：竖屏按 16:9 铺满（照片两侧各裁约 6%，正门「河北蓝泽」仍完整），横屏限高后改为完整缩放 */
+/* 首页轮播：竖屏 8:5。照片放大 8% 后完整居中（两侧各裁约 4%，正门「河北蓝泽」仍完整），
+   上下空出的部分用同一张照片的模糊版本衔接，照片边缘渐隐；横屏限高后照片按高度完整显示 */
 .home-page .hero { background: #2e3c44; color: white; }
 .hero-slides {
   position: relative;
   z-index: 0;
-  height: min(56.25vw, 78vh);
-  height: min(56.25vw, 78svh);
+  height: min(62.5vw, 78vh);
+  height: min(62.5vw, 78svh);
   touch-action: pan-y pinch-zoom;
   background: #2e3c44;
 }
-.hero-slide img { object-fit: cover; object-position: 50% 50%; }
+.hero-office { --hero-backdrop: url("assets/office-mobile.webp"); }
+.hero-highway { --hero-backdrop: url("assets/shijiazhuang-expressway-mobile.webp"); }
+.hero-bridge-truck { --hero-backdrop: url("assets/bridge-truck-mobile.webp"); }
+.hero-slide { overflow: hidden; }
+.hero-slide::before {
+  position: absolute;
+  inset: -24px;
+  content: "";
+  background: #2e3c44 var(--hero-backdrop) center / cover no-repeat;
+  filter: blur(16px) saturate(.85);
+}
+.hero-slide picture { position: relative; }
+.hero-slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 108%;
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+}
 .hero-slide::after { background: linear-gradient(180deg, rgba(16, 24, 29, .16) 0%, rgba(16, 24, 29, .42) 50%, rgba(16, 24, 29, .4) 100%); }
 .hero > .container {
   position: absolute;
@@ -396,7 +419,12 @@ h1, h2, h3, .button, .anchor-nav a, .contact-items dt, .category, .gallery figca
   .equipment-strip { grid-auto-columns: 38%; }
 }
 @media (orientation: landscape) {
-  .hero-slide img { object-fit: contain; }
+  .hero-slide img {
+    width: auto;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .js .header .nav.open, .header.menu-open::before { animation: none; }
